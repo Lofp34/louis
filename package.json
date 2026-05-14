@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "build": "mkdir -p public && cp -f index.html styles.css app.js data.json public/ && echo static build ready"
+  },
+  "devDependencies": {},
+  "name": "louis-benezech-sales-coach-dashboard",
+  "private": true
+}

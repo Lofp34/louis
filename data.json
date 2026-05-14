@@ -1,0 +1,378 @@
+{
+  "coachee": {
+    "name": "Louis Bénézech",
+    "role": "Account Manager — Septeo Solutions Avocats",
+    "period": "Printemps 2026",
+    "product": "Brain (IA juridique), DigitalDoc, Dicta+"
+  },
+  "corpus": {
+    "totalCalls": 10,
+    "demoCalls": 4,
+    "followUpCalls": 6,
+    "accountsCovered": 5,
+    "transcriptionComplete": 9,
+    "transcriptionPartial": 1
+  },
+  "keyTakeaways": [
+    "Louis est un excellent démonstrateur produit : connaissance technique irréprochable, honnêteté rare sur les limites, capacité d'adaptation en direct.",
+    "Le problème n°1 : aucun RDV démo ne se termine par une prochaine étape datée. Louis ne maîtrise pas la fin d'appel — le cycle de vente subit le rythme du prospect.",
+    "Louis ne demande jamais QUI décide, QUEL est le processus de validation, ni QUAND la décision sera prise. Son pipeline est une boîte noire.",
+    "L'exercice immédiat : 3 questions obligatoires avant chaque fin d'appel — Qui valide ? Quel processus ? On se rappelle quand ? Cible : 80% des RDV avec next step datée."
+  ],
+  "strengths": [
+    "Connaissance produit exceptionnelle — Brain, DigitalDoc, Dicta+ maîtrisés sur le bout des doigts",
+    "Honnêteté commerciale rare — admet ce que le produit ne fait pas, recommande des solutions externes (Copilot)",
+    "Capacité d'adaptation en direct — teste une requête prospect en live, fait venir l'assistante dans la démo",
+    "Pédagogie patiente — s'adapte aux non-technophiles comme aux associés exigeants",
+    "Gestion du pricing transparente — explication systématique des tokens, propositions avec/sans options"
+  ],
+  "weaknesses": [
+    {"label": "Absence de prochaine étape datée", "severity": "critical", "frequency": "4 appels sur 7", "impact": "Perte de contrôle du cycle de vente"},
+    {"label": "Pas de qualification décision/budget", "severity": "critical", "frequency": "Quasi-systématique", "impact": "Ne sait pas qui décide ni quand"},
+    {"label": "Monologue / débit excessif", "severity": "warning", "frequency": "3 appels sur 7", "impact": "Prospect passif, besoins non explorés"},
+    {"label": "Prix sans rappel de valeur", "severity": "warning", "frequency": "4 appels sur 7", "impact": "Négociation plus difficile"},
+    {"label": "Préparation prospect inégale", "severity": "warning", "frequency": "2 appels sur 7", "impact": "Crédibilité entamée en début d'appel"},
+    {"label": "Appels longs sans pause", "severity": "info", "frequency": "Tous les RDV", "impact": "Fatigue du prospect, perte d'attention"}
+  ],
+  "scoringDimensions": {
+    "preparation": {
+      "label": "Préparation prospect",
+      "description": "Recherche préalable, connaissance du cabinet et de ses besoins",
+      "scale": {"1": "Aucune préparation visible", "2": "Préparation partielle, erreurs", "3": "Préparation correcte", "4": "Bonne préparation, questions préparées", "5": "Préparation impeccable, hypothèses formulées"}
+    },
+    "decouverte": {
+      "label": "Découverte / Qualification",
+      "description": "Questions ouvertes, exploration des besoins, identification des enjeux",
+      "scale": {"1": "Aucune question, monologue pur", "2": "Quelques questions fermées", "3": "Questions ouvertes présentes", "4": "Bonne alternance questions/écoute", "5": "Découverte profonde, besoins implicites identifiés"}
+    },
+    "demoArgumentation": {
+      "label": "Démo / Argumentation",
+      "description": "Personnalisation, lien besoin → preuve, gestion du rythme",
+      "scale": {"1": "Démo standard non adaptée", "2": "Démo partiellement adaptée", "3": "Démo correcte, quelques liens", "4": "Démo personnalisée avec exemples", "5": "Démo sur-mesure, chaque feature liée à un besoin"}
+    },
+    "gestionObjections": {
+      "label": "Gestion objections / limites",
+      "description": "Honnêteté, traitement des doutes, distinction objection/écran",
+      "scale": {"1": "Nie ou esquive les objections", "2": "Répond sans isoler", "3": "Reconnaît et répond", "4": "Isole puis traite proprement", "5": "Transforme l'objection en opportunité"}
+    },
+    "closingEngagement": {
+      "label": "Closing / Engagement",
+      "description": "Prochaine étape datée, qualification décision, rappel valeur",
+      "scale": {"1": "Pas de prochaine étape, fin floue", "2": "Prochaine étape vague", "3": "Prochaine étape mentionnée", "4": "Date + heure proposée", "5": "Engagement ferme, décideur identifié, date + critères"}
+    }
+  },
+  "calls": [
+    {
+      "id": "call-01",
+      "account": "CJA Public / Me Guerin",
+      "type": "RDV Démo",
+      "duration": "~75 min",
+      "outcome": "Proposition envoyée, intérêt confirmé",
+      "outcomeClass": "partiel",
+      "score": 3.2,
+      "strengths": [
+        "Connaissance technique irréprochable du produit",
+        "Capacité à pivoter en direct (test de la requête TA envoyée par le prospect)",
+        "Franchise sur les limites du produit",
+        "Gestion du pricing et des tokens en transparence"
+      ],
+      "improvements": [
+        "Erreur de préparation : regarde le mauvais site web (CJA.fr au lieu de CJA Public)",
+        "Monologue excessif par moments (2 min sans interruption sur le paysage IA)",
+        "Prix donné sans lien avec la valeur démontrée"
+      ],
+      "priority": "Préparer chaque appel avec une fiche prospect et poser des micro-validations toutes les 60 secondes",
+      "scores": {
+        "preparation": 2,
+        "decouverte": 3,
+        "demoArgumentation": 4,
+        "gestionObjections": 3,
+        "closingEngagement": 2
+      },
+      "moments": [
+        {"type": "rise", "label": "Test requête TA en direct", "detail": "Le prospect envoie une requête, Louis l'intègre immédiatement dans la démo — moment d'engagement fort"},
+        {"type": "break", "label": "Erreur site web", "detail": "Louis consulte CJA.fr, le prospect corrige : crédibilité entamée sur la préparation"}
+      ]
+    },
+    {
+      "id": "call-02",
+      "account": "CJA Public / Me Guerin",
+      "type": "Relance avant remise en question",
+      "duration": "~2 min",
+      "outcome": "Confirmation réception, point associés en cours",
+      "outcomeClass": "correct",
+      "score": 3.0,
+      "strengths": [
+        "Appel direct et efficace",
+        "Vérifie la réception de la proposition",
+        "Crée une légère urgence (remise fin du mois)"
+      ],
+      "improvements": [
+        "Pas de prochaine étape datée"
+      ],
+      "priority": "Sur une relance, toujours proposer une date de point : « Je vous rappelle le X pour voir où vous en êtes ? »",
+      "scores": {
+        "preparation": 3,
+        "decouverte": 2,
+        "demoArgumentation": 3,
+        "gestionObjections": 3,
+        "closingEngagement": 2
+      },
+      "moments": []
+    },
+    {
+      "id": "call-03",
+      "account": "CJA Public / Me Guerin",
+      "type": "Relance après remise en question",
+      "duration": "~9 min",
+      "outcome": "Suivi post-proposition (audio seulement)",
+      "outcomeClass": "non applicable",
+      "score": null,
+      "strengths": [],
+      "improvements": [],
+      "priority": "N/A — transcription non disponible",
+      "scores": {},
+      "moments": []
+    },
+    {
+      "id": "call-04",
+      "account": "Evezard Lepy / Mandeville",
+      "type": "RDV Démo",
+      "duration": "~50 min",
+      "outcome": "Très bon engagement, proposition demandée (avec/sans module recherche)",
+      "outcomeClass": "excellent",
+      "score": 4.0,
+      "strengths": [
+        "Bonne écoute des besoins exprimés — adapte la démo en conséquence",
+        "Fait venir l'assistante (Audrey) quand il comprend que c'est l'utilisatrice clé — réflexe commercial rare",
+        "Pose des questions de qualification (nombre de dossiers/an, organisation)",
+        "Proposition avec options (avec/sans module recherche)"
+      ],
+      "improvements": [
+        "Tendance à survendre la roadmap (« on pourra interroger l'entièreté de la base fin juin »)",
+        "Débit qui s'accélère en fin d'appel"
+      ],
+      "priority": "Ne jamais promettre une fonctionnalité future sans la dater avec prudence. Ralentir en fin d'appel.",
+      "scores": {
+        "preparation": 4,
+        "decouverte": 4,
+        "demoArgumentation": 4,
+        "gestionObjections": 4,
+        "closingEngagement": 4
+      },
+      "moments": [
+        {"type": "rise", "label": "L'assistante appelée dans la démo", "detail": "Louis comprend que l'assistante est l'utilisatrice clé et l'invite à rejoindre — implication directe de la décisionnaire opérationnelle"},
+        {"type": "rise", "label": "« C'est un gain de temps, ça, quand même »", "detail": "Le prospect reconnaît spontanément la valeur — signal d'achat fort"}
+      ]
+    },
+    {
+      "id": "call-05",
+      "account": "Galland & Associés",
+      "type": "RDV Démo",
+      "duration": "~65 min",
+      "outcome": "Intérêt fort, nombreuses questions, demande de devis + options supplémentaires",
+      "outcomeClass": "excellent",
+      "score": 3.6,
+      "strengths": [
+        "Excellente gestion d'un appel groupé avec plusieurs interlocutrices",
+        "Honnêteté remarquable sur ce que le produit NE fait PAS (3 fois)",
+        "Question d'ouverture puissante : « Quel serait l'IA idéal pour vous ? »",
+        "Capacité à réorienter vers d'autres solutions (Copilot, Digital & Service)",
+        "Patience et réponse à TOUTES les questions"
+      ],
+      "improvements": [
+        "Appel très long (65 min+) sans pause",
+        "Pas de prochaine étape datée",
+        "Pas de détection du décideur parmi les 2 associées"
+      ],
+      "priority": "Identifier le décideur et fixer une date de relance avant de raccrocher",
+      "scores": {
+        "preparation": 4,
+        "decouverte": 4,
+        "demoArgumentation": 4,
+        "gestionObjections": 5,
+        "closingEngagement": 2
+      },
+      "moments": [
+        {"type": "rise", "label": "« Brain ne fait pas le tri des mails »", "detail": "Louis admet honnêtement une limite — crédibilité maximale. Les prospects posent plus de questions ensuite."},
+        {"type": "rise", "label": "« C'est séduisant »", "detail": "Me Thurel en fin d'appel — signal d'achat implicite qui aurait dû déclencher une question de closing"}
+      ]
+    },
+    {
+      "id": "call-06",
+      "account": "Galland & Associés",
+      "type": "Relance avant remise en question",
+      "duration": "~5 min",
+      "outcome": "Pas de décision, cabinet débordé, collaboratrice qui part",
+      "outcomeClass": "correct",
+      "score": 2.5,
+      "strengths": [
+        "Compréhensif face à la situation du cabinet",
+        "Ne force pas la vente"
+      ],
+      "improvements": [
+        "Ne propose pas de date de relance — subit le rythme du prospect",
+        "Pourrait proposer un point dans 3 semaines quand la situation sera stabilisée"
+      ],
+      "priority": "Même face à un prospect débordé, proposer une date de relance : « Je vous laisse respirer, on se rappelle le X ? »",
+      "scores": {
+        "preparation": 3,
+        "decouverte": 2,
+        "demoArgumentation": 2,
+        "gestionObjections": 3,
+        "closingEngagement": 1
+      },
+      "moments": []
+    },
+    {
+      "id": "call-07",
+      "account": "Jullien-Palletier",
+      "type": "RDV Démo / Support",
+      "duration": "~70 min",
+      "outcome": "Intérêt très modéré pour l'IA, demande juste SECIB Mobile",
+      "outcomeClass": "partiel",
+      "score": 3.4,
+      "strengths": [
+        "Patience remarquable avec une interlocutrice non technophile",
+        "Adaptation du discours : peu d'IA, beaucoup de support/utilitaire",
+        "Détection fine : comprend que l'IA n'est pas pour elle",
+        "Valorisation de l'existant (centre d'aide, actions liées, paraffeur)",
+        "Récap détaillé des actions en fin d'appel"
+      ],
+      "improvements": [
+        "Appel très long (70 min) pour un faible potentiel de vente additionnelle",
+        "Retard en début d'appel (appel comptable)",
+        "A quand même montré Brain alors qu'elle dit « pas à ma portée »"
+      ],
+      "priority": "Qualifier le potentiel plus tôt dans l'appel pour calibrer le temps passé",
+      "scores": {
+        "preparation": 3,
+        "decouverte": 3,
+        "demoArgumentation": 3,
+        "gestionObjections": 4,
+        "closingEngagement": 3
+      },
+      "moments": [
+        {"type": "signal", "label": "« Je pense que ça doit être génial mais pas à ma portée »", "detail": "La prospect s'auto-exclut de l'IA — Louis ne force pas, bonne adaptation"},
+        {"type": "rise", "label": "Démo actions liées et centre d'aide", "detail": "Valeur immédiate pour elle sans rien vendre de plus"}
+      ]
+    },
+    {
+      "id": "call-08",
+      "account": "Jullien-Palletier",
+      "type": "Relance avant remise en question",
+      "duration": "~3 min",
+      "outcome": "En attente de disponibilité, mail récapitulatif proposé",
+      "outcomeClass": "correct",
+      "score": 2.5,
+      "strengths": [
+        "Fait référence à l'échange précédent",
+        "Propose un récapitulatif par mail"
+      ],
+      "improvements": [
+        "Pas d'engagement ferme sur une date de rappel"
+      ],
+      "priority": "Proposer une date : « Je vous renvoie le récap et je vous rappelle la semaine du X ? »",
+      "scores": {
+        "preparation": 3,
+        "decouverte": 2,
+        "demoArgumentation": 2,
+        "gestionObjections": 3,
+        "closingEngagement": 1
+      },
+      "moments": []
+    },
+    {
+      "id": "call-09",
+      "account": "DETRIE",
+      "type": "Relance après remise en question",
+      "duration": "~1 min",
+      "outcome": "Appel très court, proposition envoyée",
+      "outcomeClass": "non applicable",
+      "score": null,
+      "strengths": [],
+      "improvements": [],
+      "priority": "N/A — appel trop court pour évaluer",
+      "scores": {},
+      "moments": []
+    },
+    {
+      "id": "call-10",
+      "account": "Evezard Lepy / Mandeville",
+      "type": "Relance avant remise en question",
+      "duration": "?",
+      "outcome": "Non transcrit (Aircall auth required)",
+      "outcomeClass": "non applicable",
+      "score": null,
+      "strengths": [],
+      "improvements": [],
+      "priority": "N/A — transcription indisponible",
+      "scores": {},
+      "moments": []
+    }
+  ],
+  "callClassification": {
+    "mainType": "Démonstration produit B2B — vente de logiciel SaaS juridique",
+    "secondaryTypes": ["Support technique", "Relance devis", "Suivi client"],
+    "sector": "Logiciels pour avocats / Legaltech",
+    "salesCycle": "Démonstration → Proposition → Décision collégiale → Signature",
+    "typicalBlockers": [
+      {"label": "Décision collégiale (associés)", "frequency": 4},
+      {"label": "Concurrents déjà en place (Doctrine)", "frequency": 3},
+      {"label": "Inertie du cabinet / pas le temps", "frequency": 3},
+      {"label": "Prix / budget", "frequency": 2},
+      {"label": "Non-technophilie", "frequency": 1}
+    ]
+  },
+  "priorityGlobal": {
+    "title": "Tu es un excellent démonstrateur. Deviens un closer.",
+    "description": "Le plus gros levier de performance immédiat : maîtriser la fin d'appel. Les démos de Louis sont bonnes, la connaissance produit est là, les prospects montrent de l'intérêt. Le problème n'est pas de générer de l'intérêt, c'est de le transformer en décision.",
+    "targetBehavior": "Chaque RDV démo se termine par : 1) Qui d'autre valide ? 2) Quel est votre processus de décision ? 3) On se rappelle le [DATE] à [HEURE] ?",
+    "indicator": "Passer de 0% de RDV avec next step datée à 80% en 2 semaines",
+    "exercises": [
+      {
+        "title": "Fiche « Fin d'appel »",
+        "description": "Avant chaque RDV démo, préparer 3 questions OBLIGATOIRES : Qui décide ? Quel processus ? Quelle date de relance ? Si elles ne sont pas posées, l'appel n'est pas terminé."
+      },
+      {
+        "title": "Ancrage valeur → prix",
+        "description": "Structurer le passage au prix : 1) Rappel du besoin exprimé, 2) Rappel de la solution montrée, 3) Annonce du prix avec le gain chiffré."
+      },
+      {
+        "title": "Relance qui fait avancer",
+        "description": "Remplacer « Vous avez bien reçu la proposition ? » par « Où en êtes-vous dans votre réflexion ? Y a-t-il des points sur lesquels je peux vous apporter des précisions ? »"
+      }
+    ]
+  },
+  "managerVersion": {
+    "title": "Pour Sandrine",
+    "goingWell": [
+      "Louis connaît ses produits sur le bout des doigts — zéro problème de crédibilité technique",
+      "Il est honnête sur les limites, ce qui est rare et précieux en vente de logiciels",
+      "Il s'adapte bien aux différents profils (technophiles, « old school », associés exigeants)"
+    ],
+    "needsProgress": [
+      "Louis ne demande jamais QUI décide et COMMENT la décision se prend. Son pipeline est une boîte noire.",
+      "Ses démos sont longues et riches, mais la fin d'appel est systématiquement faible : pas de date, pas d'engagement clair.",
+      "Les relances sont administratives (« vous avez reçu ? ») et non commerciales (« où en êtes-vous ? »)"
+    ],
+    "managerialActions": [
+      "Accompagner Louis sur 3 appels avec un débrief UNIQUEMENT sur les 5 dernières minutes",
+      "Lui demander un reporting simple : pour chaque RDV démo, noter le décideur, la date de next step, le processus de validation",
+      "Ne pas lui demander de changer son style de démo — il est bon. L'aider à ajouter 5 minutes de closing structuré."
+    ]
+  },
+  "followUpPlan": [
+    {"step": "Débrief immédiat", "when": "Cette semaine", "what": "Revue des 3 questions de fin d'appel avec Louis"},
+    {"step": "Accompagnement", "when": "Semaine prochaine", "what": "Écoute d'un appel live + débrief 5 dernières minutes"},
+    {"step": "Point pipeline", "when": "Dans 2 semaines", "what": "Vérification : 80% des RDV ont une next step datée"},
+    {"step": "Réévaluation", "when": "Dans 1 mois", "what": "Nouvelle analyse d'un corpus de 3-4 appels"}
+  ],
+  "transversalAverages": {
+    "preparation": 3.2,
+    "decouverte": 3.0,
+    "demoArgumentation": 3.3,
+    "gestionObjections": 3.6,
+    "closingEngagement": 2.2
+  }
+}
