@@ -15,9 +15,9 @@
   },
   "keyTakeaways": [
     "Louis est un excellent démonstrateur produit : connaissance technique irréprochable, honnêteté rare sur les limites, capacité d'adaptation en direct.",
-    "Le problème n°1 : aucun RDV démo ne se termine par une prochaine étape datée. Louis ne maîtrise pas la fin d'appel — le cycle de vente subit le rythme du prospect.",
-    "Louis ne demande jamais QUI décide, QUEL est le processus de validation, ni QUAND la décision sera prise. Son pipeline est une boîte noire.",
-    "L'exercice immédiat : 3 questions obligatoires avant chaque fin d'appel — Qui valide ? Quel processus ? On se rappelle quand ? Cible : 80% des RDV avec next step datée."
+    "Le point racine : Louis fait souvent verbaliser les attentes, mais pas assez les enjeux et les conséquences subies. Le prospect voit l'intérêt, sans toujours ressentir l'urgence d'avancer.",
+    "Le closing faible est donc surtout une conséquence : sans coût du statu quo formulé par le client, la prochaine étape devient administrative plutôt que naturelle.",
+    "L'exercice immédiat : avant le prix, obtenir une phrase client sur la conséquence métier — temps perdu, charge assistante, risque, retard ou confort — puis seulement ensuite qualifier qui décide et quand."
   ],
   "strengths": [
     "Connaissance produit exceptionnelle — Brain, DigitalDoc, Dicta+ maîtrisés sur le bout des doigts",
@@ -27,38 +27,104 @@
     "Gestion du pricing transparente — explication systématique des tokens, propositions avec/sans options"
   ],
   "weaknesses": [
-    {"label": "Absence de prochaine étape datée", "severity": "critical", "frequency": "4 appels sur 7", "impact": "Perte de contrôle du cycle de vente"},
-    {"label": "Pas de qualification décision/budget", "severity": "critical", "frequency": "Quasi-systématique", "impact": "Ne sait pas qui décide ni quand"},
-    {"label": "Monologue / débit excessif", "severity": "warning", "frequency": "3 appels sur 7", "impact": "Prospect passif, besoins non explorés"},
-    {"label": "Prix sans rappel de valeur", "severity": "warning", "frequency": "4 appels sur 7", "impact": "Négociation plus difficile"},
-    {"label": "Préparation prospect inégale", "severity": "warning", "frequency": "2 appels sur 7", "impact": "Crédibilité entamée en début d'appel"},
-    {"label": "Appels longs sans pause", "severity": "info", "frequency": "Tous les RDV", "impact": "Fatigue du prospect, perte d'attention"}
+    {
+      "label": "Découverte trop courte sur les conséquences client",
+      "severity": "critical",
+      "frequency": "Récurrente dans les RDV démo",
+      "impact": "Le prospect comprend l'intérêt, mais ne verbalise pas assez pourquoi il doit avancer maintenant"
+    },
+    {
+      "label": "Monologue / débit excessif",
+      "severity": "warning",
+      "frequency": "3 appels sur 7",
+      "impact": "Prospect passif, enjeux et impacts peu explorés"
+    },
+    {
+      "label": "Prix sans rappel de valeur ni coût du statu quo",
+      "severity": "warning",
+      "frequency": "4 appels sur 7",
+      "impact": "Le prix arrive comme une information, pas comme la réponse à un problème coûteux"
+    },
+    {
+      "label": "Absence de prochaine étape datée",
+      "severity": "critical",
+      "frequency": "4 appels sur 7",
+      "impact": "Perte de contrôle du cycle de vente"
+    },
+    {
+      "label": "Pas de qualification décision/budget",
+      "severity": "critical",
+      "frequency": "Quasi-systématique",
+      "impact": "Ne sait pas qui décide, pourquoi, ni quand"
+    },
+    {
+      "label": "Préparation prospect inégale",
+      "severity": "warning",
+      "frequency": "2 appels sur 7",
+      "impact": "Crédibilité entamée en début d'appel"
+    },
+    {
+      "label": "Appels longs sans pause",
+      "severity": "info",
+      "frequency": "Tous les RDV",
+      "impact": "Fatigue du prospect, perte d'attention"
+    }
   ],
   "scoringDimensions": {
     "preparation": {
       "label": "Préparation prospect",
       "description": "Recherche préalable, connaissance du cabinet et de ses besoins",
-      "scale": {"1": "Aucune préparation visible", "2": "Préparation partielle, erreurs", "3": "Préparation correcte", "4": "Bonne préparation, questions préparées", "5": "Préparation impeccable, hypothèses formulées"}
+      "scale": {
+        "1": "Aucune préparation visible",
+        "2": "Préparation partielle, erreurs",
+        "3": "Préparation correcte",
+        "4": "Bonne préparation, questions préparées",
+        "5": "Préparation impeccable, hypothèses formulées"
+      }
     },
     "decouverte": {
-      "label": "Découverte / Qualification",
-      "description": "Questions ouvertes, exploration des besoins, identification des enjeux",
-      "scale": {"1": "Aucune question, monologue pur", "2": "Quelques questions fermées", "3": "Questions ouvertes présentes", "4": "Bonne alternance questions/écoute", "5": "Découverte profonde, besoins implicites identifiés"}
+      "label": "Découverte enjeux / conséquences",
+      "description": "Questions ouvertes, exploration des besoins, enjeux métier, conséquences subies et coût du statu quo",
+      "scale": {
+        "1": "Aucune question, monologue pur",
+        "2": "Quelques besoins fonctionnels identifiés",
+        "3": "Besoins et usages compris, impacts peu creusés",
+        "4": "Enjeux et conséquences partiellement verbalisés par le client",
+        "5": "Découverte profonde : attentes, conséquences, priorité et critères de décision formulés par le client"
+      }
     },
     "demoArgumentation": {
       "label": "Démo / Argumentation",
       "description": "Personnalisation, lien besoin → preuve, gestion du rythme",
-      "scale": {"1": "Démo standard non adaptée", "2": "Démo partiellement adaptée", "3": "Démo correcte, quelques liens", "4": "Démo personnalisée avec exemples", "5": "Démo sur-mesure, chaque feature liée à un besoin"}
+      "scale": {
+        "1": "Démo standard non adaptée",
+        "2": "Démo partiellement adaptée",
+        "3": "Démo correcte, quelques liens",
+        "4": "Démo personnalisée avec exemples",
+        "5": "Démo sur-mesure, chaque feature liée à un besoin"
+      }
     },
     "gestionObjections": {
       "label": "Gestion objections / limites",
       "description": "Honnêteté, traitement des doutes, distinction objection/écran",
-      "scale": {"1": "Nie ou esquive les objections", "2": "Répond sans isoler", "3": "Reconnaît et répond", "4": "Isole puis traite proprement", "5": "Transforme l'objection en opportunité"}
+      "scale": {
+        "1": "Nie ou esquive les objections",
+        "2": "Répond sans isoler",
+        "3": "Reconnaît et répond",
+        "4": "Isole puis traite proprement",
+        "5": "Transforme l'objection en opportunité"
+      }
     },
     "closingEngagement": {
       "label": "Closing / Engagement",
-      "description": "Prochaine étape datée, qualification décision, rappel valeur",
-      "scale": {"1": "Pas de prochaine étape, fin floue", "2": "Prochaine étape vague", "3": "Prochaine étape mentionnée", "4": "Date + heure proposée", "5": "Engagement ferme, décideur identifié, date + critères"}
+      "description": "Prochaine étape datée, qualification décision, reprise des conséquences client avant engagement",
+      "scale": {
+        "1": "Pas de prochaine étape, fin floue",
+        "2": "Prochaine étape vague, peu reliée aux enjeux",
+        "3": "Prochaine étape mentionnée avec rappel de valeur général",
+        "4": "Date + décideur + conséquence client reprise",
+        "5": "Engagement ferme : décideur identifié, date, critères et coût du statu quo explicités"
+      }
     }
   },
   "calls": [
@@ -79,9 +145,9 @@
       "improvements": [
         "Erreur de préparation : regarde le mauvais site web (CJA.fr au lieu de CJA Public)",
         "Monologue excessif par moments (2 min sans interruption sur le paysage IA)",
-        "Prix donné sans lien avec la valeur démontrée"
+        "Signal fort sur le tamponnage non assez creusé : conséquence métier peu verbalisée avant prix"
       ],
-      "priority": "Préparer chaque appel avec une fiche prospect et poser des micro-validations toutes les 60 secondes",
+      "priority": "Après chaque besoin exprimé, creuser l’impact : « Aujourd’hui, ça vous coûte quoi concrètement ? » puis seulement ensuite montrer la fonctionnalité.",
       "scores": {
         "preparation": 2,
         "decouverte": 3,
@@ -90,8 +156,21 @@
         "closingEngagement": 2
       },
       "moments": [
-        {"type": "rise", "label": "Test requête TA en direct", "detail": "Le prospect envoie une requête, Louis l'intègre immédiatement dans la démo — moment d'engagement fort"},
-        {"type": "break", "label": "Erreur site web", "detail": "Louis consulte CJA.fr, le prospect corrige : crédibilité entamée sur la préparation"}
+        {
+          "type": "rise",
+          "label": "Test requête TA en direct",
+          "detail": "Le prospect envoie une requête, Louis l'intègre immédiatement dans la démo — moment d'engagement fort"
+        },
+        {
+          "type": "break",
+          "label": "Erreur site web",
+          "detail": "Louis consulte CJA.fr, le prospect corrige : crédibilité entamée sur la préparation"
+        },
+        {
+          "type": "signal",
+          "label": "« Mettre des tampons, ce n'est pas mon job »",
+          "detail": "Besoin explicite fort. Louis peut s'en servir pour faire verbaliser le coût actuel avant d'ancrer DigitalDoc et le prix."
+        }
       ]
     },
     {
@@ -150,9 +229,10 @@
       ],
       "improvements": [
         "Tendance à survendre la roadmap (« on pourra interroger l'entièreté de la base fin juin »)",
+        "Le signal « gain de temps » aurait pu être creusé : combien, pour qui, avec quelle conséquence sur l'organisation ?",
         "Débit qui s'accélère en fin d'appel"
       ],
-      "priority": "Ne jamais promettre une fonctionnalité future sans la dater avec prudence. Ralentir en fin d'appel.",
+      "priority": "Transformer les signaux de valeur en conséquences verbalisées : « Ce gain de temps changerait quoi concrètement pour Audrey / pour vous / pour le cabinet ? »",
       "scores": {
         "preparation": 4,
         "decouverte": 4,
@@ -161,8 +241,16 @@
         "closingEngagement": 4
       },
       "moments": [
-        {"type": "rise", "label": "L'assistante appelée dans la démo", "detail": "Louis comprend que l'assistante est l'utilisatrice clé et l'invite à rejoindre — implication directe de la décisionnaire opérationnelle"},
-        {"type": "rise", "label": "« C'est un gain de temps, ça, quand même »", "detail": "Le prospect reconnaît spontanément la valeur — signal d'achat fort"}
+        {
+          "type": "rise",
+          "label": "L'assistante appelée dans la démo",
+          "detail": "Louis comprend que l'assistante est l'utilisatrice clé et l'invite à rejoindre — implication directe de la décisionnaire opérationnelle"
+        },
+        {
+          "type": "rise",
+          "label": "« C'est un gain de temps, ça, quand même »",
+          "detail": "Le prospect reconnaît spontanément la valeur — signal d'achat fort"
+        }
       ]
     },
     {
@@ -182,10 +270,11 @@
       ],
       "improvements": [
         "Appel très long (65 min+) sans pause",
+        "Signal « c'est séduisant » non transformé en question d'impact ou de décision",
         "Pas de prochaine étape datée",
         "Pas de détection du décideur parmi les 2 associées"
       ],
-      "priority": "Identifier le décideur et fixer une date de relance avant de raccrocher",
+      "priority": "À chaque signal d’intérêt, demander : « Qu’est-ce que ça changerait concrètement dans votre organisation ? » puis qualifier qui valide.",
       "scores": {
         "preparation": 4,
         "decouverte": 4,
@@ -194,8 +283,16 @@
         "closingEngagement": 2
       },
       "moments": [
-        {"type": "rise", "label": "« Brain ne fait pas le tri des mails »", "detail": "Louis admet honnêtement une limite — crédibilité maximale. Les prospects posent plus de questions ensuite."},
-        {"type": "rise", "label": "« C'est séduisant »", "detail": "Me Thurel en fin d'appel — signal d'achat implicite qui aurait dû déclencher une question de closing"}
+        {
+          "type": "rise",
+          "label": "« Brain ne fait pas le tri des mails »",
+          "detail": "Louis admet honnêtement une limite — crédibilité maximale. Les prospects posent plus de questions ensuite."
+        },
+        {
+          "type": "rise",
+          "label": "« C'est séduisant »",
+          "detail": "Me Thurel en fin d'appel — signal d'achat implicite qui aurait dû déclencher une question de closing"
+        }
       ]
     },
     {
@@ -253,8 +350,16 @@
         "closingEngagement": 3
       },
       "moments": [
-        {"type": "signal", "label": "« Je pense que ça doit être génial mais pas à ma portée »", "detail": "La prospect s'auto-exclut de l'IA — Louis ne force pas, bonne adaptation"},
-        {"type": "rise", "label": "Démo actions liées et centre d'aide", "detail": "Valeur immédiate pour elle sans rien vendre de plus"}
+        {
+          "type": "signal",
+          "label": "« Je pense que ça doit être génial mais pas à ma portée »",
+          "detail": "La prospect s'auto-exclut de l'IA — Louis ne force pas, bonne adaptation"
+        },
+        {
+          "type": "rise",
+          "label": "Démo actions liées et centre d'aide",
+          "detail": "Valeur immédiate pour elle sans rien vendre de plus"
+        }
       ]
     },
     {
@@ -313,34 +418,57 @@
   ],
   "callClassification": {
     "mainType": "Démonstration produit B2B — vente de logiciel SaaS juridique",
-    "secondaryTypes": ["Support technique", "Relance devis", "Suivi client"],
+    "secondaryTypes": [
+      "Support technique",
+      "Relance devis",
+      "Suivi client"
+    ],
     "sector": "Logiciels pour avocats / Legaltech",
     "salesCycle": "Démonstration → Proposition → Décision collégiale → Signature",
     "typicalBlockers": [
-      {"label": "Décision collégiale (associés)", "frequency": 4},
-      {"label": "Concurrents déjà en place (Doctrine)", "frequency": 3},
-      {"label": "Inertie du cabinet / pas le temps", "frequency": 3},
-      {"label": "Prix / budget", "frequency": 2},
-      {"label": "Non-technophilie", "frequency": 1}
+      {
+        "label": "Décision collégiale (associés)",
+        "frequency": 4
+      },
+      {
+        "label": "Concurrents déjà en place (Doctrine)",
+        "frequency": 3
+      },
+      {
+        "label": "Inertie du cabinet / pas le temps",
+        "frequency": 3
+      },
+      {
+        "label": "Prix / budget",
+        "frequency": 2
+      },
+      {
+        "label": "Non-technophilie",
+        "frequency": 1
+      }
     ]
   },
   "priorityGlobal": {
-    "title": "Tu es un excellent démonstrateur. Deviens un closer.",
-    "description": "Le plus gros levier de performance immédiat : maîtriser la fin d'appel. Les démos de Louis sont bonnes, la connaissance produit est là, les prospects montrent de l'intérêt. Le problème n'est pas de générer de l'intérêt, c'est de le transformer en décision.",
-    "targetBehavior": "Chaque RDV démo se termine par : 1) Qui d'autre valide ? 2) Quel est votre processus de décision ? 3) On se rappelle le [DATE] à [HEURE] ?",
-    "indicator": "Passer de 0% de RDV avec next step datée à 80% en 2 semaines",
+    "title": "Excellent démonstrateur : faire verbaliser les conséquences pour closer.",
+    "description": "Le levier prioritaire n'est pas d'ajouter une technique de closing en fin d'appel. C'est de faire émerger avant le prix ce que le problème actuel coûte au client : temps perdu, charge assistante, risque, retard, frustration ou arbitrage interne. Quand le client le formule lui-même, le closing devient la suite logique de son propre diagnostic.",
+    "targetBehavior": "Chaque RDV démo suit la chaîne Attente → Enjeu → Conséquence → Décision : 1) ce que vous voulez résoudre, 2) pourquoi ça compte, 3) ce que ça coûte aujourd'hui, 4) qui valide et quand on tranche.",
+    "indicator": "Dans 2 semaines : 80% des RDV avec au moins une conséquence client verbalisée avant le prix + une next step datée.",
     "exercises": [
       {
-        "title": "Fiche « Fin d'appel »",
-        "description": "Avant chaque RDV démo, préparer 3 questions OBLIGATOIRES : Qui décide ? Quel processus ? Quelle date de relance ? Si elles ne sont pas posées, l'appel n'est pas terminé."
+        "title": "3 questions d'impact avant la démo",
+        "description": "Avant de montrer une fonctionnalité : 1) Aujourd'hui, comment vous le faites ? 2) Qu'est-ce que ça provoque ? 3) C'est un confort, un irritant ou une priorité ?"
       },
       {
-        "title": "Ancrage valeur → prix",
-        "description": "Structurer le passage au prix : 1) Rappel du besoin exprimé, 2) Rappel de la solution montrée, 3) Annonce du prix avec le gain chiffré."
+        "title": "Transformer un signal en conséquence",
+        "description": "Quand le client dit « intéressant », « séduisant » ou « gain de temps », ralentir : « Ça changerait quoi concrètement pour vous / votre assistante / le cabinet ? »"
       },
       {
-        "title": "Relance qui fait avancer",
-        "description": "Remplacer « Vous avez bien reçu la proposition ? » par « Où en êtes-vous dans votre réflexion ? Y a-t-il des points sur lesquels je peux vous apporter des précisions ? »"
+        "title": "Conséquence → prix → décision",
+        "description": "Avant le prix, reprendre les mots du client sur le coût actuel. Puis demander : « Au regard de ce gain-là, qui doit valider et quand voulez-vous qu'on tranche ? »"
+      },
+      {
+        "title": "Relance de progression",
+        "description": "Remplacer « Vous avez bien reçu ? » par : « Lors de notre échange, vous m’aviez dit que ___ vous coûtait ___. Est-ce que ce sujet reste prioritaire et que manque-t-il pour décider ? »"
       }
     ]
   },
@@ -352,21 +480,38 @@
       "Il s'adapte bien aux différents profils (technophiles, « old school », associés exigeants)"
     ],
     "needsProgress": [
-      "Louis ne demande jamais QUI décide et COMMENT la décision se prend. Son pipeline est une boîte noire.",
-      "Ses démos sont longues et riches, mais la fin d'appel est systématiquement faible : pas de date, pas d'engagement clair.",
-      "Les relances sont administratives (« vous avez reçu ? ») et non commerciales (« où en êtes-vous ? »)"
+      "Louis doit faire davantage verbaliser les conséquences du problème avant de montrer ou d'expliquer la solution.",
+      "Ses démos créent de l'intérêt, mais pas toujours assez d'urgence décisionnelle : le client reste parfois au niveau « intéressant » plutôt que « il faut avancer ».",
+      "Le closing est faible parce que les enjeux, les critères de décision et le coût du statu quo ne sont pas assez formulés par le client.",
+      "Les prochaines étapes restent floues : qui décide, sur quels critères, à quelle date ?"
     ],
     "managerialActions": [
-      "Accompagner Louis sur 3 appels avec un débrief UNIQUEMENT sur les 5 dernières minutes",
-      "Lui demander un reporting simple : pour chaque RDV démo, noter le décideur, la date de next step, le processus de validation",
-      "Ne pas lui demander de changer son style de démo — il est bon. L'aider à ajouter 5 minutes de closing structuré."
+      "Accompagner Louis sur 3 appels en observant surtout les moments où un client exprime un besoin ou un intérêt : Louis creuse-t-il l'impact avant de poursuivre la démo ?",
+      "Lui demander un reporting simple : pour chaque RDV démo, noter 1 phrase client sur la conséquence du problème, le décideur, la date de next step et le processus de validation.",
+      "Ne pas lui demander de changer son style de démo — il est bon. L'aider à insérer des questions d'impact avant les fonctionnalités clés et avant le prix."
     ]
   },
   "followUpPlan": [
-    {"step": "Débrief immédiat", "when": "Cette semaine", "what": "Revue des 3 questions de fin d'appel avec Louis"},
-    {"step": "Accompagnement", "when": "Semaine prochaine", "what": "Écoute d'un appel live + débrief 5 dernières minutes"},
-    {"step": "Point pipeline", "when": "Dans 2 semaines", "what": "Vérification : 80% des RDV ont une next step datée"},
-    {"step": "Réévaluation", "when": "Dans 1 mois", "what": "Nouvelle analyse d'un corpus de 3-4 appels"}
+    {
+      "step": "Débrief immédiat",
+      "when": "Cette semaine",
+      "what": "Revue de la séquence Attente → Enjeu → Conséquence → Décision avec Louis"
+    },
+    {
+      "step": "Accompagnement",
+      "when": "Semaine prochaine",
+      "what": "Écoute d'un appel live + débrief des moments où Louis aurait pu creuser l'impact"
+    },
+    {
+      "step": "Point pipeline",
+      "when": "Dans 2 semaines",
+      "what": "Vérification : 80% des RDV ont une conséquence client verbalisée + une next step datée"
+    },
+    {
+      "step": "Réévaluation",
+      "when": "Dans 1 mois",
+      "what": "Nouvelle analyse d'un corpus de 3-4 appels"
+    }
   ],
   "transversalAverages": {
     "preparation": 3.2,
