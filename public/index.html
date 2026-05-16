@@ -1,64 +1,132 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Louis Bénézech — Dashboard Coaching</title><link rel="stylesheet" href="styles.css"></head><body>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Louis Bénézech — Dashboard Coaching V2</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 <header class="hero">
-  <nav><div class="brand">Louis<span>Bénézech</span></div><a href="#calls">Entretiens</a><a href="#transversal">Analyse</a><a href="#scoring">Notation</a></nav>
-  <section><p class="eyebrow">Dashboard coaching · Sandrine (manager)</p><h1>Performances commerciales — Louis Bénézech</h1><p class="lead">Analyse comportementale de 10 entretiens clients : comment transformer l'excellence technique de Louis en motivation d'achat, en faisant verbaliser les enjeux et conséquences avant le closing.</p><div class="hero-actions"><a class="btn" href="#calls">Voir les analyses</a><a class="btn ghost" href="#transversal">Synthèse transversale</a></div></section>
+  <nav>
+    <div class="brand">Louis<span>Bénézech</span></div>
+    <a href="#manager">Manager</a>
+    <a href="#progression">Progression</a>
+    <a href="#calls">Entretiens</a>
+    <a href="#toolbox">Questions</a>
+    <a href="#routine">Routine</a>
+  </nav>
+  <section>
+    <p class="eyebrow">Dashboard coaching V2 · Louis + Sandrine</p>
+    <h1>Transformer l’intérêt produit en motivation d’achat</h1>
+    <p class="lead">Louis démontre très bien. La V2 sert à entraîner le geste qui rend le closing naturel : faire verbaliser au client ses enjeux, les conséquences du statu quo et son processus de décision.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#manager">Synthèse manager</a>
+      <a class="btn ghost" href="#calls">Ouvrir les entretiens</a>
+    </div>
+  </section>
 </header>
+
 <main>
-<section class="kpis">
-  <div><b id="kpi-total">—</b><span>entretiens analysés</span></div>
-  <div><b id="kpi-demos">—</b><span>rendez-vous démo</span></div>
-  <div><b id="kpi-relances">—</b><span>relances & appels courts</span></div>
-  <div><b id="kpi-accounts">—</b><span>comptes couverts</span></div>
-</section>
+  <section class="kpis">
+    <div><b id="kpi-total">—</b><span>entretiens analysés</span></div>
+    <div><b id="kpi-demos">—</b><span>rendez-vous démo</span></div>
+    <div><b id="kpi-relances">—</b><span>relances & appels courts</span></div>
+    <div><b id="kpi-accounts">—</b><span>comptes couverts</span></div>
+  </section>
 
-<section class="notice"><h2>À retenir</h2><div id="takeaways"></div><p class="muted">Analyse produite par Coach Vente — couvre la période Printemps 2026. Comptes : CJA Public, Evezard Lepy, Galland & Associés, Jullien-Palletier, DETRIE.</p></section>
+  <section class="manager-summary" id="manager">
+    <div>
+      <p class="eyebrow">Synthèse manager</p>
+      <h2>Le point à travailler n’est pas la démo. C’est ce qui se passe avant le closing.</h2>
+      <p>Louis crée de la confiance et de l’intérêt. Le levier prioritaire est de faire dire au client pourquoi le sujet compte maintenant, ce que l’inaction coûte, puis qui décide et comment.</p>
+    </div>
+    <div class="manager-grid">
+      <article><span>Force principale</span><strong>Crédibilité produit et métier</strong><p>Démonstration claire, honnête et adaptée aux profils.</p></article>
+      <article><span>Fragilité prioritaire</span><strong>Conséquences client trop peu verbalisées</strong><p>L’intérêt reste parfois intellectuel, pas assez décisionnel.</p></article>
+      <article><span>Indicateur simple</span><strong>1 conséquence client avant le prix</strong><p>Chaque démo doit contenir une phrase client sur le coût du statu quo.</p></article>
+    </div>
+  </section>
 
-<section class="split" id="classification">
-  <div><p class="eyebrow">Classification</p><h2>Démonstration produit B2B — vente SaaS juridique</h2><p>4 appels de démonstration Brain + 6 relances et appels de support. Cycle type : Démo → Proposition → Décision collégiale → Signature.</p><div class="pills" id="class-pills"></div></div>
-  <div class="panel"><h3>Freins métier observés</h3><div id="class-blockers"></div></div>
-</section>
+  <section class="formula-strip">
+    <p class="eyebrow">Colonne vertébrale V2</p>
+    <div id="formula-steps"></div>
+  </section>
 
-<section class="leaderboard"><p class="eyebrow">Scores contextualisés</p><h2>Lecture des appels — Louis Bénézech</h2><div class="rank-grid" id="leaderboard"></div></section>
+  <section class="notice"><h2>À retenir</h2><div id="takeaways"></div><p class="muted">Analyse produite par Coach Vente — période Printemps 2026. Comptes : CJA Public, Evezard Lepy, Galland & Associés, Jullien-Palletier, DETRIE.</p></section>
 
-<section id="calls"><p class="eyebrow">Analyses individuelles</p><h2>Chaque entretien, une priorité claire</h2><div class="calls" id="calls-container"></div></section>
+  <section class="progress-dashboard" id="progression">
+    <p class="eyebrow">Vue progression Louis</p>
+    <h2>Scores par dimension commerciale</h2>
+    <div id="avg-scores" class="dimension-grid"></div>
+    <div class="global-evolution">
+      <h3>Lecture globale des entretiens notés</h3>
+      <div id="call-trend"></div>
+    </div>
+  </section>
 
-<section class="split" id="transversal">
-  <div><p class="eyebrow">Analyse transversale</p><h2>Forces et fragilités récurrentes</h2><h3 style="color:var(--green);font-size:18px">✅ Forces à préserver</h3><ul class="strength-list" id="strengths-list"></ul>
-  <h3 style="color:var(--red);font-size:18px;margin-top:20px">⚠️ Fragilités à corriger</h3><ul class="weakness-list" id="weaknesses-list"></ul></div>
-  <div class="panel"><h3>Moyennes par dimension</h3><div id="avg-scores"></div></div>
-</section>
+  <section class="split" id="classification">
+    <div><p class="eyebrow">Classification</p><h2>Démonstration produit B2B — vente SaaS juridique</h2><p>4 appels de démonstration Brain + 6 relances et appels de support. Cycle type : Démo → Proposition → Décision collégiale → Signature.</p><div class="pills" id="class-pills"></div></div>
+    <div class="panel"><h3>Freins métier observés</h3><div id="class-blockers"></div></div>
+  </section>
 
-<section class="priority-global">
-  <p class="eyebrow">Priorité unique de progression</p><h2 id="priority-title"></h2>
-  <p class="description" id="priority-desc"></p>
-  <div class="grid two">
-    <div class="exercise"><h3>Comportement cible</h3><p id="priority-target"></p></div>
-    <div class="exercise"><h3>Indicateur observable</h3><p id="priority-indicator"></p></div>
-  </div>
-  <h3 style="margin-top:20px">Exercices terrain</h3>
-  <div id="priority-exercises"></div>
-</section>
+  <section class="priority-global">
+    <p class="eyebrow">Priorité unique de progression</p><h2 id="priority-title"></h2>
+    <p class="description" id="priority-desc"></p>
+    <div class="grid two">
+      <div class="exercise"><h3>Comportement cible</h3><p id="priority-target"></p></div>
+      <div class="exercise"><h3>Indicateur observable</h3><p id="priority-indicator"></p></div>
+    </div>
+    <h3 style="margin-top:20px">Exercices terrain</h3>
+    <div id="priority-exercises"></div>
+  </section>
 
-<section id="scoring"><p class="eyebrow">Grille de notation</p><h2>Dimensions d'évaluation contextualisées</h2><p style="color:var(--muted)">Échelle 1–5 adaptée à la vente de logiciel SaaS juridique en cycle long (démo → décision collégiale)</p><div class="scale-grid" id="scoring-grid"></div></section>
+  <section id="calls">
+    <p class="eyebrow">Analyses individuelles</p>
+    <h2>Entretiens repliables : diagnostic → preuve → correction</h2>
+    <div id="calls-container"></div>
+  </section>
 
-<section class="manager-card">
-  <p class="eyebrow" style="color:var(--gold)">Version Manager</p><h3>Pour Sandrine</h3>
-  <div class="grid two">
-    <div><h4>✅ Ce qui va bien</h4><ul id="manager-well"></ul></div>
-    <div><h4>⚠️ Ce qui doit progresser</h4><ul id="manager-progress"></ul></div>
-  </div>
-  <h4 style="margin-top:16px">🎯 Actions managériales recommandées</h4>
-  <ul class="actions" id="manager-actions"></ul>
-</section>
+  <section class="toolbox" id="toolbox">
+    <p class="eyebrow">Boîte à outils Louis</p>
+    <h2>Questions à poser avant de démontrer ou closer</h2>
+    <div id="question-toolbox" class="toolbox-grid"></div>
+  </section>
 
-<section class="routines">
-  <p class="eyebrow">Suivi recommandé</p><h2>Progression dans le temps</h2>
-  <div id="followup-cards"></div>
-</section>
+  <section class="before-after">
+    <p class="eyebrow">Entraînement concret</p>
+    <h2>Avant / Après : remplacer l’explication par une question d’impact</h2>
+    <div id="before-after-grid"></div>
+  </section>
+
+  <section class="split" id="transversal">
+    <div><p class="eyebrow">Analyse transversale</p><h2>Forces et fragilités récurrentes</h2><h3 style="color:var(--green);font-size:18px">✅ Forces à préserver</h3><ul class="strength-list" id="strengths-list"></ul>
+    <h3 style="color:var(--red);font-size:18px;margin-top:20px">⚠️ Fragilités à corriger</h3><ul class="weakness-list" id="weaknesses-list"></ul></div>
+    <div class="panel"><h3>Top entretiens notés</h3><div id="leaderboard"></div></div>
+  </section>
+
+  <section class="manager-card" id="routine">
+    <p class="eyebrow" style="color:var(--gold)">Routine Sandrine</p><h3>Comment coacher Louis sans casser son style</h3>
+    <div class="grid two">
+      <div><h4>✅ Ce qui va bien</h4><ul id="manager-well"></ul></div>
+      <div><h4>⚠️ Ce qui doit progresser</h4><ul id="manager-progress"></ul></div>
+    </div>
+    <h4 style="margin-top:16px">🎯 Actions managériales recommandées</h4>
+    <ul class="actions" id="manager-actions"></ul>
+  </section>
+
+  <section class="routines">
+    <p class="eyebrow">Suivi recommandé</p><h2>Plan d’entraînement sur 2 semaines</h2>
+    <div id="followup-cards"></div>
+  </section>
+
+  <section id="scoring"><p class="eyebrow">Grille</p><h2>Dimensions d’évaluation contextualisées</h2><p style="color:var(--muted)">Échelle 1–5 adaptée à la vente de logiciel SaaS juridique en cycle long. Le scoring aide à lire la progression ; il ne remplace pas le coaching.</p><div class="scale-grid" id="scoring-grid"></div></section>
 </main>
 <footer>
-  <p>Analyse comportementale · Coach Vente 🎧 · Mai 2026</p>
+  <p>Analyse comportementale · Coach Vente 🎧 · Dashboard V2 · Mai 2026</p>
   <p class="redacted">Cet outil est un coach privé, pas un instrument de contrôle RH.</p>
-  <p class="redacted">Ne pas diffuser sans l'accord de Laurent Serre.</p>
+  <p class="redacted">Ne pas diffuser sans l’accord de Laurent Serre.</p>
 </footer>
-<script src="app.js"></script></body></html>
+<script src="app.js"></script>
+</body>
+</html>
